@@ -31,16 +31,16 @@ body {
 }
 
 .event-blue {
-    background: #8cbbe9;
-    color: #222;
+    background: #83a8fe;
+    color: #ffffff;
     font-weight: bold;
     font-size: 0.95em;
     padding: 7px 0px 0px 6px;
 }
 
 .event-red {
-    background: #f7b6b6;
-    color: #222;
+    background: #0048e2;
+    color: #ffffff;
     font-weight: bold;
     font-size: 0.95em;
     padding: 7px 0px 0px 6px;
@@ -48,8 +48,8 @@ body {
 }
 
 .event-purple {
-    background: #d1b6f7;
-    color: #222;
+    background: #000e68;
+    color: #ffffff;
     font-weight: bold;
     font-size: 0.95em;
     padding: 7px 0px 0px 6px;
@@ -76,7 +76,7 @@ body {
 }
 
 .calendar-bar {
-    background: #990000;
+    background: #83a8fe;
     color: #fff;
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@ body {
 }
 
 .calendar-bar .back-btn {
-    background: #990000;
+    background: #83a8fe;
     border: none;
     color: #fff;
     font-size: 2em;
@@ -288,7 +288,7 @@ body {
     height: 16px;
     margin-right: 8px;
     border-radius: 4px;
-    background: #8cbbe9;
+    background: #83a8fe;
 }
 
 .legend-icon-red {
@@ -297,7 +297,7 @@ body {
     height: 16px;
     margin-right: 8px;
     border-radius: 4px;
-    background: #f7b6b6;
+    background: #0048e2;
 }
 
 .legend-icon-purple {
@@ -306,7 +306,7 @@ body {
     height: 16px;
     margin-right: 8px;
     border-radius: 4px;
-    background: #d1b6f7;
+    background: #000e68;
 }
 
 .calendar-legend span {
