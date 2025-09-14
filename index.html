@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Penn Calendar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="header">
+      <img src="assets/Penn_Logo.jpg" alt="Penn Logo" class="penn-logo">
+      <span class="welcome">Welcome, <b>Julius</b></span>
+    </div>
+  </div>
+  <div class="calendar-bar">
+    <button class="back-btn">&#8592;</button>
+    <span class="calendar-title">Calendar</span>
+    <a href="#" class="home-btn">&#8962;</a>
+  </div>
+  <div class="calendar-container">
+    <table class="calendar-table">
+      <tr>
+        <th class="time-col"></th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+      </tr>
+      <!-- 8am to 5pm rows -->
+      <tr>
+        <td class="time-col">8am</td>
+        <td>
+          <div class="event event-blue event-top-rounded">CIS 105</div>
+        </td>
+        <td></td>
+        <td></td>
+        <td style="position:relative;" rowspan="2">
+          <div class="event event-blue" style="z-index:2;">CIS 180</div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-col">9am</td>
+        <td>
+          <div class="event event-purple">Cis 105 / Sec 112</div>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-col">10am</td>
+        <td>
+          <div class="event event-red event-bottom-rounded">Sec 112</div>
+        </td>
+        <td></td>
+        <td style="position:relative;" rowspan="2">
+          <div class="event event-blue" style="z-index:2;">CIS 170</div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-col">11am</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><div class="event event-blue event-top-rounded">CIS 190</div></td>
+      </tr>
+      <tr>
+        <td class="time-col">noon</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><div class="event event-purple">Cis 190 / Sec 114</div></td>
+      </tr>
+      <tr>
+        <td class="time-col">1pm</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><div class="event event-red event-bottom-rounded">Sec 114</div></td>
+      </tr>
+      <tr>
+        <td class="time-col">2pm</td>
+        <td></td>
+        <td></td>
+        <td style="position:relative;" rowspan="2">
+          <div class="event event-blue" style="z-index:2;">CIS 160</div>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-col">3pm</td>
+        <td rowspan="2">
+          <div class="event event-red">Sec 202</div>
+        </td>
+        <td></td>
+        <!-- <td> entfällt, da von oben mit rowspan="2" belegt -->
+        <td></td>
+        <td rowspan="2">
+          <div class="event event-blue">CIS 160</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-col">4pm</td>
+        <!-- <td> entfällt, da von oben mit rowspan="2" belegt -->
+        <td></td>
+        <td>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="time-col">5pm</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <!-- Legende unter dem Kalender, oberhalb des Section Detail Containers -->
+  <div class="calendar-legend">
+  <span><span class="legend-icon-blue"></span>Primary Cart</span>
+  <span><span class="legend-icon-red"></span>Sections</span>
+  <span><span class="legend-icon-purple"></span>Overlap</span>
+</div>
+  <!-- Section Detail Container (zunächst versteckt) -->
+  <div id="section-detail" style="display:none; margin-top: 24px;">
+    <div id="section-title" style="font-size: 1.2em; font-weight: bold; margin-bottom: 12px;"></div>
+    <div class="button-grid">
+      <button>
+        <img src="assets/grocery-store.png" alt="Manage Cart/Plans" class="button-icon" />
+        <span>Manage Cart/Plans</span>
+      </button>
+      <button>
+        <img src="assets/bin.png" alt="Drop" class="button-icon" />
+        <span>Drop</span>
+      </button>
+      <button>
+        <img src="assets/magnifying-glass.png" alt="Course Overview" class="button-icon" />
+        <span>Course Overview</span>
+      </button>
+      <button>
+        <img src="assets/bell.png" alt="Course alert" class="button-icon" />
+        <span>Course alert</span>
+      </button>
+    </div>
+  </div>
+  <script>
+    // Wenn ein rotes Event geklickt wird, zeige den Detailbereich an
+    document.querySelectorAll('.event-red').forEach(ev => {
+      ev.addEventListener('click', function() {
+        document.getElementById('section-title').textContent = this.textContent;
+        document.getElementById('section-detail').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
